@@ -1,0 +1,23 @@
+name: plugfox
+description: plugfox.dev
+version: 0.0.1+1
+author: Plague Fox <Plugfox@gmail.com>
+homepage: https://github.com/plugfox
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  js: ^0.6.1+1
+  meta: ^1.1.8
+  service_worker: ^0.2.3
+  pwa: ^0.2.0
+
+dev_dependencies:
+  pedantic: any
+  build_web_compilers: ^2.9.0
+  build_runner: any
+  build_test: any
+  test: any
+
+dependency_overrides:
