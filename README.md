@@ -1,4 +1,24 @@
 # [PLAGUE FOX HOMEPAGE](https://plugfox.dev)  
+   
+### Install firebase  
+  
+ + for macOS:  
+```bash
+brew install node
+```  
+  
+ + for Windows:  
+```bash
+choco install nodejs
+```  
+  
+then  
+  
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
 
 ### Dependencies
 ```bash
@@ -6,7 +26,8 @@ dart pub global activate webdev
 dart pub get
 ```
 
-### How ot serve
+
+### Serve
 
 * uses dartdevc with Dart DevTools
 ```bash
@@ -18,8 +39,22 @@ webdev serve --no-release --debug web:8080
 webdev serve --release web:8080
 ```
 
-### How ot build
+* uses firebase
+```bash
+cd build/
+firebase serve
+```
+
+
+### Build
 ```bash
 webdev build --release --output web:build
-dart compile js --output web:build
+```
+
+
+### Publish  
+  
+```bash
+cd build/
+firebase deploy --only hosting --project plug-fox -m "<Описание ручного релиза>"
 ```
