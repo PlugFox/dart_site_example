@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#ffffff" />
     <!-- TITLE -->
-    <title>@PlugFox</title>
+    <title>Plague Fox</title>
 
     <!-- META -->
     <meta charset="utf-8">
@@ -15,12 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#37474f">
+    <meta name="apple-mobile-web-app-title" content="Plague Fox">
+    <meta name="application-name" content="Plague Fox">
+    <meta name="msapplication-TileColor" content="#37474f">
+    <meta name="theme-color" content="#37474f">
 
-    <!-- FONT -->
+    <!-- FONT & ICONS -->
+    <link rel="stylesheet" href="/css/icons.css">
 
     <!-- STYLE -->
     <link rel="stylesheet" href="/css/main.css">
@@ -29,7 +37,25 @@
     <script defer src="main.dart.js" type="application/javascript"></script>
   </head>
   <body>
-    <!-- NOSCRIPT -->
+    <!-- NOSCRIPT
     <noscript class='noscript-center'>Your browser does not support JavaScript!</noscript>
+     -->
+
+    <div id="app">
+      <h1 id="title">@PLUGFOX</h1>
+      <div id="contacts" class="icon-bar">
+        <a href="mailto:plugfox@gmail.com"><i class="icon-mail"></i></a>
+        <a href="https://github.com/PlugFox/"><i class="icon-github-circled"></i></a>
+        <a href="https://t.me/plugfox"><i class="icon-telegram"></i></a>
+        <a href="https://www.linkedin.com/in/plugfox/"><i class="icon-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UCRva5jH_39U-rLt6S9JJyUw"><i class="icon-youtube"></i></a>
+        <a href="https://www.instagram.com/plugfox/"><i class="icon-instagram"></i></a>
+        <a href="#"><i class="icon-qrcode"></i></a>
+      </div>
+    </div>
+
+    <div id="qr-overlay" hidden="true" style="display: none;">
+      <div id="qr-overlay-image"></div>
+    </div>
   </body>
 </html>

@@ -1,23 +1,35 @@
 import 'dart:async';
-import 'dart:html';
-import 'package:meta/meta.dart' show immutable;
-import 'package:plugfox/src/components/title.dart';
+import 'dart:html' as html;
 
-@immutable
-class App {
-  FutureOr<void> init() =>
-    document.body
-      ..append(title);
+import 'package:homepage/src/common/utility/l.dart';
+import 'package:rxdart/rxdart.dart';
 
-  @override
-  int get hashCode => 0;
-  @override
-  bool operator ==(Object obj) =>
-    obj is App;
+void start() => runZonedGuarded(
+      _qrSetOnClickCallback,
+      (error, stackTrace) {
+        l.error(error.toString(), error: error, stackTrace: stackTrace, name: 'TOP_LEVEL_ERROR');
+      },
+    );
 
-  // SINGLETON +
-  static final App _singleton = App._internal();
-  factory App() => _singleton;
-  App._internal();
-  // SINGLETON -
+void _qrSetOnClickCallback() {
+  final document = html.document;
+  final elements = document
+      .getElementsByClassName('icon-qrcode')
+      .map<html.Element?>((e) => e.parent)
+      .whereType<html.AnchorElement>()
+      .toList(growable: false);
+  if (elements.isEmpty) return;
+  final button = elements.first;
+  final qrElement = document.getElementById('qr-overlay');
+  if (qrElement == null) return;
+  qrElement.onClick.throttleTime(const Duration(milliseconds: 500)).forEach((_) {
+    qrElement
+      ..hidden = true
+      ..style.display = 'none';
+  });
+  button.onClick.throttleTime(const Duration(milliseconds: 500)).forEach((_) {
+    document.getElementById('qr-overlay')
+      ?..hidden = false
+      ..style.display = 'block';
+  });
 }

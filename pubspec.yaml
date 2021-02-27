@@ -1,23 +1,51 @@
-name: plugfox
-description: plugfox.dev
-version: 0.0.1+1
-author: Plague Fox <Plugfox@gmail.com>
-homepage: https://github.com/plugfox
+name: homepage
+description: PLAGUE FOX HOMEPAGE
+author: Plague Fox <PlugFox@gmail.com>
+site: https://PlugFox.dev
+homepage: https://github.com/PlugFox/homepage
+publish_to: 'none'
+version: 0.0.2
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0" # Dart
 
 dependencies:
-  js: ^0.6.1+1
-  meta: ^1.1.8
-  service_worker: ^0.2.3
+  # Architecture and IoC
+  #bloc: ^7.0.0-nullsafety.1
+
+  # Web
+  js: ^0.6.3
+  service_worker: ^0.2.4
   pwa: ^0.2.0
 
+  # Annotation and Models
+  meta: ^1.3.0-nullsafety.6
+  #freezed_annotation: ^0.13.0-nullsafety.0
+  #equatable: ^2.0.0-nullsafety.3
+  #json_annotation: ^3.0.1
+
+  # Utility
+  #platform_info: ^3.0.0-nullsafety.1
+
+  # Transformers
+  rxdart: ^0.26.0-nullsafety.1
+
+  # Network
+  #dio: ^3.0.10
+  #retrofit: ^1.3.4
+
 dev_dependencies:
-  pedantic: any
-  build_web_compilers: ^2.9.0
   build_runner: any
+  build_web_compilers: any
   build_test: any
   test: any
+  #pubspec_generator: ^2.1.1-dev
+  #retrofit_generator: ^1.3.7+5
+  #grinder: ^0.8.6
+  #json_serializable: ^4.0.0-nullsafety.0
+  #freezed: ^0.13.0-nullsafety.2
+  #faker: ^1.2.1
+  #mockito: ^4.1.1
 
-dependency_overrides:
+#dependency_overrides:
+
