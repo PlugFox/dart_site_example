@@ -165,26 +165,14 @@ h1#title {
     background: #1020277F;
     z-index: 1000;
     display: none;
-}
-#qr-overlay-image {
-    width: 75%;
-    height: 75%;
-    position: absolute;
-    top: 12.5%;
-    left: 12.5%;
-    background-image: url(/image/qr-code.svg), url(/image/qr-code-ultra-large.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto; /* contain */
 
     /* Animation */
-    transition: all 0.5s ease;
-    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0.5s; /* Firefox < 16 */
-        -ms-animation: fadein 0.5s; /* Internet Explorer */
-         -o-animation: fadein 0.5s; /* Opera < 12.1 */
-            animation: fadein 0.5s;
+    transition: all 1s ease;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
 }
 @keyframes fadein {
     from { opacity: 0; }
@@ -209,6 +197,19 @@ h1#title {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+#qr-overlay-image {
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    background-image: url(/image/qr-code.svg), url(/image/qr-code-ultra-large.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto; /* contain */
 }
 
 /* Ultra small devices (320px and down) */
