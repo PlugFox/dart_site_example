@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /image/
+Disallow: /css/
+Disallow: /font/
+Host: plugfox.dev
+Sitemap: http://plugfox.dev/sitemap.xml
