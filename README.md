@@ -49,8 +49,24 @@ firebase serve
 ### Build
 ```bash
 webdev build --release --output web:build
+dart run pwa // if you need pwa
+webdev build --release --output web:build // again if you need pwa
 ```
 
+### Generate PWA
+```bash
+webdev build --release --output web:build
+cd build
+rm -rf packages .firebase .dart_tool
+dart run pwa
+```
+
+then add `// @dart=2.9` at pwa.dart for unsound null safety
+and rebuild project with
+
+```bash
+webdev build --release --output web:build
+```
 
 ### Publish  
   

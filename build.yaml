@@ -16,7 +16,8 @@ targets:
             - --fast-startup
             - --minify
             - --trust-primitives
-            - --trust-type-annotations
+      #      - --trust-type-annotations
+            - --omit-implicit-checks
             - -DTITLE=@PlugFox
       #json_serializable:
       #  enabled: true

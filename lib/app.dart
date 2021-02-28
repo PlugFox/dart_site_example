@@ -2,10 +2,15 @@ import 'dart:async';
 import 'dart:html' as html;
 
 import 'package:homepage/src/common/utility/l.dart';
+import 'package:pwa/client.dart' as pwa;
 import 'package:rxdart/rxdart.dart';
 
 void start() => runZonedGuarded(
-      _qrSetOnClickCallback,
+      () {
+        // register PWA ServiceWorker for offline caching.
+        final client = pwa.Client();
+        _qrSetOnClickCallback();
+      },
       (error, stackTrace) {
         l.error(error.toString(), error: error, stackTrace: stackTrace, name: 'TOP_LEVEL_ERROR');
       },
